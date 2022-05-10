@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" type="module"></script>
+    <title>Tourist List</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Tourist list</h1>
+        <div class="add_delete_container">      
+        </div>
+
+        <div class="popUp">
+            <form  id="popUpForm" action="" onsubmit="closeForm()">
+                <input id="serialNumber" name="serial_number" placeholder="Serial Number" type="text"> <br>     
+                <input id="id" name="id" placeholder="ID" type="text"> <br> 
+                <input id="name" name="name" placeholder="NAME" type="text"><br>
+                <input id="eMail" name="eMail" placeholder="E-MAIL" type="text"><br>
+                <input id="imageUrl" name="imageUrl" placeholder="ImageURL" type="text"><br>
+                <input id="location" name="location" placeholder="LOCATION" type="text"><br>
+               <button type="submit">submit</button>
+           </form>
+        </div>
+        
+        <div id="tourist"></div>
+        <!-- <div id="details"></div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    margin: 2rem auto;
+}
+#update__button, #delete__button {
+    border: .05rem solid rgb(253, 137, 3);
+    border-radius: 10%;
+    background-color: rgb(181, 174, 245);
+    font-size: large;
+    padding: .3rem;
+    margin: .5rem 1rem;   
+    margin-left: 13rem;     
+}
+/* form */
+.popUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;   
+}
+
+.close {
+    color: #0c0c0c;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    justify-content: flex-end;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+
+#popUpForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid brown;
+    width: 23%;
+    border-radius: 10%;
+    padding: 1rem;    
+}
+#poUpForm input {
+    align-items: center;
+    margin: .5rem;
+}
+.tourist__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem auto;
+    border: .05rem solid rgb(253, 137, 3);
+    background-color: bisque;
+    border-radius: 10%;
+    width: 60%;
+    gap: 2rem;
+}
+.tourist__onclick {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem auto;
+}
+.image {
+    width: 30%;
+    border-radius: 100%;
+    margin: 1rem;
+}
+.tourist__container .tourist__container {
+    margin: 1rem;
+}
+p {
+    padding: .5rem;
+}
+
+
+
+
+
+
+
+
