@@ -7,14 +7,18 @@ h1 {
     text-align: center;
     margin: 2rem auto;
 }
-#update__button, #delete__button {
+.update__button, .delete__button {
     border: .05rem solid rgb(253, 137, 3);
     border-radius: 10%;
     background-color: rgb(181, 174, 245);
+    
     font-size: large;
     padding: .3rem;
     margin: .5rem 1rem;   
-    margin-left: 13rem;     
+        
+}
+.btn {
+    text-align: center;
 }
 /* form */
 .popUp {
@@ -53,12 +57,11 @@ h1 {
 .tourist__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin: 1rem auto;
     border: .05rem solid rgb(253, 137, 3);
     background-color: bisque;
-    border-radius: 10%;
     width: 60%;
     gap: 2rem;
 }
@@ -81,6 +84,55 @@ p {
     padding: .5rem;
 }
 
+/* model */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+#close {
+    color: rgb(48, 26, 26);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.tourist__popup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    border: .05rem solid rgb(253, 137, 3);
+    background-color: rgb(232, 188, 134);
+    width: 60%;
+    gap: 2rem;
+}
 
 
 
