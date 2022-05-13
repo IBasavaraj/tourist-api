@@ -39,6 +39,9 @@ h1 {
     margin-left: 3rem;
     margin-top: 1rem;
   }
+  #pop_up_form {
+      display: none;
+  }
 
 #popUpForm {
     display: flex;
@@ -133,10 +136,3 @@ p {
     width: 60%;
     gap: 2rem;
 }
-
-
-
-
-
-
-
