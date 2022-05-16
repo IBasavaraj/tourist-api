@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tourist__container {  
+    z-index: 1;
+    margin: 1rem auto;
+    height: 40rem;
+    border: .05rem solid rgb(241, 202, 159);
+    background-color: rgb(213, 239, 243);
+    width: 40rem;
+    padding:2rem;
+    border-radius: 5%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tourist__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.delete__container {
+    text-align: end;
+    padding: .4rem .4rem 0 0;
+    cursor: pointer;
+}
+.details__container {
+    text-align: start;
+}
+.close {
+    color: #0c0c0c;
+    font-size: 3rem;
+    font-size: x-large;
+    cursor: pointer;
+    align-self: flex-start;
+    justify-content: flex-end;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  p {
+      margin-top:2rem;
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="update.css">
+    <title>Tourist Update</title>
+</head>
+
+<body onload="getParameters();return false">
+
+    <div class="container">
+        <form >
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="tourist_name" name="tourist_name" value="" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="e_mail">E-mail</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="tourist_email" name="tourist_email" value="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="location">Location</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="tourist_location" name="tourist_location" value="" >
+                </div>
+            </div>
+            
+            <br>
+            <div class="row">
+                <button onclick="updateTourist"> Submit</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="update.js"></script>
+
+
+</body>
+
+</html>

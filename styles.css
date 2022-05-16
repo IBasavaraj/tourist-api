@@ -3,23 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-h1 {
+.title {
     text-align: center;
     margin: 2rem auto;
 }
-.update__button, .delete__button {
+.update__button {
     border: .05rem solid rgb(253, 137, 3);
     border-radius: 10%;
     background-color: rgb(181, 174, 245);
-    
+    z-index: 2;
     font-size: large;
     padding: .3rem;
-    margin: .5rem 1rem;   
+    margin: .5rem 1rem;
+    cursor: pointer;   
         
 }
-.btn {
+.delete__container {
+    text-align: end;
+    padding: .4rem .4rem 0 0;
+    cursor: pointer;
+}
+.details__container {
+    text-align: start;
+}
+
+
+.tourist__btn {
     text-align: center;
 }
+
 /* form */
 .popUp {
     display: flex;
@@ -32,7 +44,7 @@ h1 {
 .close {
     color: #0c0c0c;
     font-size: 3rem;
-    font-weight: bold;
+    font-size: x-large;
     cursor: pointer;
     align-self: flex-start;
     justify-content: flex-end;
@@ -57,32 +69,31 @@ h1 {
     align-items: center;
     margin: .5rem;
 }
-.tourist__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+
+
+
+
+.tourist__container {  
+    z-index: 1;
     margin: 1rem auto;
     border: .05rem solid rgb(253, 137, 3);
     background-color: bisque;
     width: 60%;
-    gap: 2rem;
+    border-radius: 5%;
+    cursor: pointer;
+    text-align: center;
 }
-.tourist__onclick {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+
+.tourist__flex {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: 1rem auto;
+    gap: 1.5rem;
 }
-.image {
-    width: 30%;
-    border-radius: 100%;
-    margin: 1rem;
-}
-.tourist__container .tourist__container {
-    margin: 1rem;
-}
+
+
 p {
     padding: .5rem;
 }

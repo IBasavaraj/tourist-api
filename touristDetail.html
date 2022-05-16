@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="touristDetail.css">
+    <title>Tourist Detail</title>
+</head>
+<body>
+    <div>
+        <div id="tourist-"+`${touristItem.id}` class="tourist__container">
+            <div class="delete__container">
+            <span class="delete__close close" id="tourist__close">X</span>
+            </div>
+            <div class="tourist__flex">
+                <div class="details__container">
+                    <p>Name: `${touristItem.tourist_name}`</p>
+                    <p>E-mail: `${touristItem.tourist_email}`</p>
+                    <p>Location: `${touristItem.tourist_location}`</p>
+                </div>                
+                <p>`${touristItem.createdat}`</p>               
+            </div>                   
+            </div>
+         
+    </div>
+    <script type="text/javascript" src="touristDetail.js"></script>
+    
+</body>
+</html>
