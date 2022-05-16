@@ -1,4 +1,4 @@
-import { doGETCall, doPUTCall, doDELETECall } from "./utility.js"
+import { doGETCall, doDELETECall } from "./utility.js"
 const tourist = document.getElementById("tourist");
 const tourist_popup = document.getElementById("tourist_popup");
 const headers = { "content-type": "application/json" };
