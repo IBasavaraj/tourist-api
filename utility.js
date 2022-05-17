@@ -3,14 +3,6 @@ function doGETCall(getUrl, headers, getData) {
             method: "GET",
             headers: headers
         })
-        .then(res => {
-            if (res.ok) {
-                console.log("HTTP request successful");
-            } else {
-                console.log("HTTP request unsuccessful");
-            }
-            return res;
-        })
             .then(res => res.json())
             .then(data => getData(data))
             .catch(error => console.error(error));   

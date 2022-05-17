@@ -16,7 +16,7 @@ input[type=text] {
     display: inline-block;
   }
   
-  input[type=submit] {
+  button {
     background-color: #04AA6D;
     color: white;
     padding:  .75rem 1.25rem;
@@ -26,7 +26,7 @@ input[type=text] {
     float: right;
   }
   
-  input[type=submit]:hover {
+  button:hover {
     background-color: #45a049;
   }
   
@@ -57,9 +57,4 @@ input[type=text] {
   }
   
 
-  @media screen and (max-width: 37.5px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+  

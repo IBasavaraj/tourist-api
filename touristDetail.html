@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="touristDetail.css">
     <title>Tourist Detail</title>
 </head>
-<body>
+<body onload="getParameters()">
     <div>
-        <div id="tourist-"+`${touristItem.id}` class="tourist__container">
+        <div id="tourist-" +`${touristItem.id}` class="tourist__container">
             <div class="delete__container">
-            <span class="delete__close close" id="tourist__close">X</span>
+                <span class="delete__close close" id="tourist__close">X</span>
             </div>
             <div class="tourist__flex">
                 <div class="details__container">
-                    <p>Name: `${touristItem.tourist_name}`</p>
-                    <p>E-mail: `${touristItem.tourist_email}`</p>
-                    <p>Location: `${touristItem.tourist_location}`</p>
-                </div>                
-                <p>`${touristItem.createdat}`</p>               
-            </div>                   
+                    <p id="tourist_name"></p>
+                    <p id="tourist_email"></p>
+                    <p id="tourist_location"></p>
+                </div>
+                <p id="created_at"></p>
+                </p>
             </div>
-         
+        </div>
+
     </div>
     <script type="text/javascript" src="touristDetail.js"></script>
-    
+
 </body>
 </html>

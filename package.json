@@ -1,19 +1,11 @@
 {
-    
-    "name": "touristlist",
-    "source": "index.html",
-    "scripts": {
-      "start": "parcel",
-      "build": "parcel build"
-    },
-
-"devDependencies": {
-    
-
-    
-
-"parcel": "^2.5.0"
-    
-
-}
+  "name": "touristlist",
+  "source": "home.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
 }
