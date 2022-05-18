@@ -1,0 +1,18 @@
+.tourist__container {
+  height: 40rem;
+  width: 40rem;
+  background-color: #d5eff3;
+  border: .05rem solid #f1ca9f;
+  padding: 2rem;
+}
+
+.delete__container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.close {
+  text-align: end;
+}
+
+/*# sourceMappingURL=touristDetail.7b3d60fe.css.map */

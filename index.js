@@ -1,4 +1,5 @@
-import { doGETCall, doPUTCall, doDELETECall } from "./utility.js"
+import { doGETCall, doDELETECall } from "./utility.js"
+// import { getDate } from "./apihelper.js"
 const tourist = document.getElementById("tourist");
 const headers = { "content-type": "application/json" };
 const getUrl = "http://restapi.adequateshop.com/api/Tourist";
@@ -18,12 +19,12 @@ function show(data) {
                     <p>E-mail: ${touristItem.tourist_email}</p>
                     <p>Location: ${touristItem.tourist_location}</p>
                 </div>                
-                <p>${touristItem.createdat}</p>               
+                <p>${getDate(touristItem.createdat)}</p>               
             </div>
             <div class="tourist__btn">
             <button id=update-${touristItem.id} class="update__button">UPDATE</button>
             </div>                   
-            </div>`
+            </div>`;
     }
     for (let touristItem of data.data) {
         document.getElementById(`tourist-${touristItem.id}`).onclick = () => {
@@ -34,7 +35,6 @@ function show(data) {
             const deleteUrl = `http://restapi.adequateshop.com/api/Tourist/${touristItem.id}`;
             const deleteData = (data) => document.location.reload();
             doDELETECall(deleteUrl, deleteData);
-
         }
         document.getElementById(`update-${touristItem.id}`).onclick = (e) => {
             e.stopPropagation();

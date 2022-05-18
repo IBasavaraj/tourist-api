@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"8BYnO":[function(require,module,exports) {
+})({"4bXx8":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "0a8ecb283d214d75";
+module.bundle.HMR_BUNDLE_ID = "68f334c5e7e9eb56";
 function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -525,98 +525,39 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"bB7Pu":[function(require,module,exports) {
+},{}],"a5gqA":[function(require,module,exports) {
 var _utilityJs = require("./utility.js");
-// import { getDate } from "./apihelper.js"
-const tourist = document.getElementById("tourist");
-const headers = {
-    "content-type": "application/json"
+let url = new URL(window.location.href);
+let params = new URLSearchParams(url.search);
+let tourist_id = params.get("user_id");
+let tourist_name = params.get("tourist_name");
+let tourist_email = params.get("tourist_email");
+let tourist_location = params.get("tourist_location");
+document.getElementById("tourist_name").value = tourist_name;
+document.getElementById("tourist_email").value = tourist_email;
+document.getElementById("tourist_location").value = tourist_location;
+document.getElementById("tourist_submit").onclick = ()=>{
+    console.log("i entered update");
+    const updateTourist = {
+        "tourist_name": document.getElementById("tourist_name").value,
+        "tourist_email": document.getElementById("tourist_email").value,
+        "tourist_location": document.getElementById("tourist_location").value
+    };
+    console.log(JSON.stringify(updateTourist));
+    console.log(tourist_id);
+    const putUrl = `http://restapi.adequateshop.com/api/Tourist/${tourist_id}`;
+    const body = JSON.stringify(updateTourist);
+    const putData = (data)=>{
+        console.log(data);
+        document.location.assign("home.html");
+    };
+    const headers = {
+        "content-type": "application/json"
+    };
+    console.log("function call started");
+    _utilityJs.doPUTCall(putUrl, headers, body, putData);
+    console.log("function call finished");
 };
-const getUrl = "http://restapi.adequateshop.com/api/Tourist";
-const getData = (data)=>{
-    show(data);
-};
-_utilityJs.doGETCall(getUrl, headers, getData);
-function show(data) {
-    console.log(data);
-    for (let touristItem of data.data)tourist.innerHTML += `         
-            <div id=tourist-${touristItem.id} class="tourist__container" >
-            <div class="delete__container">
-            <span class="delete__close close" id=delete-${touristItem.id} >X</span>
-            </div>
-            <div class="tourist__flex">
-                <div class="details__container">
-                    <p>Name: ${touristItem.tourist_name}</p>
-                    <p>E-mail: ${touristItem.tourist_email}</p>
-                    <p>Location: ${touristItem.tourist_location}</p>
-                </div>                
-                <p>${getDate(touristItem.createdat)}</p>               
-            </div>
-            <div class="tourist__btn">
-            <button id=update-${touristItem.id} class="update__button">UPDATE</button>
-            </div>                   
-            </div>`;
-    for (let touristItem1 of data.data){
-        document.getElementById(`tourist-${touristItem1.id}`).onclick = ()=>{
-            document.location.assign(`touristDetail.html?user_id=${touristItem1.id}&tourist_name=${touristItem1.tourist_name}&tourist_email=${touristItem1.tourist_email}&tourist_location=${touristItem1.tourist_location}&createdat=${touristItem1.createdat}`);
-        };
-        document.getElementById(`delete-${touristItem1.id}`).onclick = (e)=>{
-            e.stopPropagation();
-            const deleteUrl = `http://restapi.adequateshop.com/api/Tourist/${touristItem1.id}`;
-            const deleteData = (data)=>document.location.reload()
-            ;
-            _utilityJs.doDELETECall(deleteUrl, deleteData);
-        };
-        document.getElementById(`update-${touristItem1.id}`).onclick = (e)=>{
-            e.stopPropagation();
-            const url = `update.html?user_id=${touristItem1.id}&tourist_name=${touristItem1.tourist_name}&tourist_email=${touristItem1.tourist_email}&tourist_location=${touristItem1.tourist_location}&createdat=${touristItem1.createdat}`;
-            window.location.href = url;
-        };
-    }
-} // function getParameters() {
- //     let url = new URL(window.location.href);
- //     let params = new URLSearchParams(url.search);
- //     let tourist_id = params.get("user_id");
- //     let tourist_name = params.get("tourist_name");
- //     let tourist_email = params.get("tourist_email");
- //     let tourist_location = params.get("tourist_location");
- //     console.log(tourist_id);
- //     document.getElementById("tourist_name").value = tourist_name;
- //     document.getElementById("tourist_email").value = tourist_email;
- //     document.getElementById("tourist_location").value = tourist_location;
- //     document.getElementById("tourist_submit").onclick = () => {
- //         console.log("i entered update");
- //         const updateTourist = {
- //             "tourist_name": document.getElementById("tourist_name").value,
- //             "tourist_email": document.getElementById("tourist_email").value,
- //             "tourist_location": document.getElementById("tourist_location").value
- //         }
- //         console.log(JSON.stringify(updateTourist));
- //         console.log(tourist_id);
- //         const putUrl = `http://restapi.adequateshop.com/api/Tourist/${tourist_id}`;
- //         const body = JSON.stringify(updateTourist);
- //         const putData = (data) => {
- //             console.log(data);
- //             // document.location.assign("home.html");
- //         }
- //         console.log("function call started");
- //         doPUTCall(postUrl, headers, body, putData);
- //         console.log("function call finished");
- //         // function doPUTCall(postUrl, headers, body, putData) {
- //         // fetch(`http://restapi.adequateshop.com/api/Tourist/${tourist_id}`, {
- //         //     method: 'PUT',
- //         //     headers: { "content-type": "application/json" },
- //         //     body: JSON.stringify(updateTourist)
- //         // })
- //         //     .then(response => response.json())
- //         //     .then(data => {
- //         //         console.log(data);
- //         //     // document.location.assign("home.html");
- //         //     })
- //         //     .catch(err => console.error(err))
- //         // }
- //     }
- // }
 
 },{"./utility.js":"2J5qt"}],"2J5qt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -684,6 +625,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["8BYnO","bB7Pu"], "bB7Pu", "parcelRequireedd0")
+},{}]},["4bXx8","a5gqA"], "a5gqA", "parcelRequireedd0")
 
-//# sourceMappingURL=home.3d214d75.js.map
+//# sourceMappingURL=update.e7e9eb56.js.map

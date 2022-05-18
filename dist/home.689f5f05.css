@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tourist__container {
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5%;
+  margin: 1rem auto;
+}
+
+.tourist__flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  display: inline-flex;
+}
+
+.details__container {
+  text-align: start;
+}
+
+.close {
+  color: #0c0c0c;
+  cursor: pointer;
+  justify-content: flex-end;
+  align-self: flex-start;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  font-size: x-large;
+}
+
+p {
+  padding: .5rem;
+}
+
+/*# sourceMappingURL=home.689f5f05.css.map */

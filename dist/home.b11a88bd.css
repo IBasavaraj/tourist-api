@@ -1,12 +1,12 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .title {
   text-align: center;
   margin: 2rem auto;
+}
+
+.delete__container {
+  text-align: end;
+  cursor: pointer;
+  padding: .4rem .4rem 0 0;
 }
 
 .update__button {
@@ -20,51 +20,20 @@
   font-size: large;
 }
 
-.delete__container {
-  text-align: end;
-  cursor: pointer;
-  padding: .4rem .4rem 0 0;
-}
-
-.details__container {
-  text-align: start;
-}
-
 .tourist__btn {
   text-align: center;
 }
 
-.close {
-  color: #0c0c0c;
-  cursor: pointer;
-  justify-content: flex-end;
-  align-self: flex-start;
-  margin-top: 1rem;
-  margin-left: 3rem;
-  font-size: x-large;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .tourist__container {
-  z-index: 1;
   width: 60%;
-  cursor: pointer;
-  text-align: center;
   background-color: bisque;
   border: .05rem solid #fd8903;
-  border-radius: 5%;
-  margin: 1rem auto;
-}
-
-.tourist__flex {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 1.5rem;
-  display: inline-flex;
-}
-
-p {
-  padding: .5rem;
 }
 
 /*# sourceMappingURL=home.b11a88bd.css.map */
