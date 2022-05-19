@@ -19,7 +19,7 @@ function show(data) {
                     <p>E-mail: ${touristItem.tourist_email}</p>
                     <p>Location: ${touristItem.tourist_location}</p>
                 </div>                
-                <p>${getDate(touristItem.createdat)}</p>               
+                <p>${touristItem.createdat}</p>               
             </div>
             <div class="tourist__btn">
             <button id=update-${touristItem.id} class="update__button">UPDATE</button>
